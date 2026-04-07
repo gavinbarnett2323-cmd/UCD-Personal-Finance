@@ -6,7 +6,7 @@
 <title>UCD Personal Finance | Build Real Wealth. Start Now.</title>
 <meta name="description" content="The premier personal finance organization at UC Davis. Real investing, real trading, real results.">
 <link rel="icon" type="image/png" href="images/logo.png">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 /* ============================================
    RESET & BASE
@@ -287,11 +287,12 @@ a:hover ~ .cursor-dot, button:hover ~ .cursor-dot,
 }
 
 .hero h1 {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(2.5rem, 7vw, 5.5rem);
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: 3px;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: 1px;
+  font-variant: small-caps;
   color: var(--gold);
   text-shadow: 0 0 60px rgba(201,168,76,0.2);
   opacity: 0;
@@ -626,13 +627,15 @@ section { position: relative; z-index: 1; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 15%;
+  transform: scale(1.4);
   filter: grayscale(40%) brightness(0.9);
   transition: all 0.5s;
 }
 
 .board-card:hover .board-photo img {
   filter: grayscale(0%) brightness(1);
-  transform: scale(1.05);
+  transform: scale(1.5);
 }
 
 .board-role {
@@ -1070,7 +1073,6 @@ section { position: relative; z-index: 1; }
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">UC Davis &mdash; Est. 2025</div>
-    <img src="images/logo.png" alt="UCDPF" class="hero-logo">
     <h1>Personal<br>Finance Club
       <span class="thin">Build Real Wealth. Start Now.</span>
     </h1>
@@ -1486,6 +1488,36 @@ navLinks.querySelectorAll('a').forEach(link => {
     navLinks.classList.remove('open');
   });
 });
+
+/* ============================================
+   STAT COUNTER ANIMATION
+   ============================================ */
+const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.animated) {
+      entry.target.dataset.animated = 'true';
+      const target = parseInt(entry.target.dataset.count);
+      const prefix = entry.target.dataset.prefix || '';
+      if (target === 0) {
+        entry.target.textContent = prefix + '0';
+        return;
+      }
+      let current = 0;
+      const duration = 2000;
+      const step = target / (duration / 16);
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        entry.target.textContent = prefix + Math.floor(current);
+      }, 16);
+    }
+  });
+}, { threshold: 0.5 });
+statNumbers.forEach(el => statsObserver.observe(el));
 
 /* ============================================
    SMOOTH SCROLL
