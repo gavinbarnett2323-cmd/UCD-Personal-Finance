@@ -638,6 +638,34 @@ section { position: relative; z-index: 1; }
   transform: scale(1.5);
 }
 
+.board-initials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--gold);
+  background: radial-gradient(circle at 50% 38%, rgba(201,168,76,0.14), var(--bg-card));
+  transition: all 0.5s;
+}
+
+.board-card:hover .board-initials {
+  color: var(--gold-light);
+}
+
+.board-soon {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
 .board-role {
   font-size: 0.65rem;
   font-weight: 600;
@@ -1057,6 +1085,7 @@ section { position: relative; z-index: 1; }
   <ul class="nav-links" id="navLinks">
     <li><a href="#mission">Mission</a></li>
     <li><a href="#board">Board</a></li>
+    <li><a href="#meetings">Meetings</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#membership" class="nav-cta">Join Now</a></li>
   </ul>
@@ -1115,11 +1144,11 @@ section { position: relative; z-index: 1; }
 
   <div class="stats-bar reveal">
     <div class="stat">
-      <span class="stat-number" data-count="6">0</span>
-      <div class="stat-label">Figures Managed</div>
+      <span class="stat-number" data-count="218">218</span>
+      <div class="stat-label">Members</div>
     </div>
     <div class="stat">
-      <span class="stat-number" data-count="9">0</span>
+      <span class="stat-number" data-count="8">8</span>
       <div class="stat-label">Board Members</div>
     </div>
     <div class="stat">
@@ -1142,8 +1171,8 @@ section { position: relative; z-index: 1; }
     <p class="section-sub">The team driving real financial education at UC Davis.</p>
   </div>
 
-  <!-- Founders Row -->
-  <div class="founders-row">
+  <!-- President -->
+  <div class="founders-row" style="grid-template-columns: 1fr; max-width: 420px;">
     <div class="board-card founder reveal">
       <div class="board-photo"><img src="images/gavin-barnett.jpg" alt="Gavin Barnett"></div>
       <div class="board-role">Founder &amp; President</div>
@@ -1153,20 +1182,38 @@ section { position: relative; z-index: 1; }
         LinkedIn
       </a>
     </div>
-    <div class="board-card founder reveal reveal-delay-1">
-      <div class="board-photo"><img src="images/izaya-luna.jpg" alt="Izaya Luna"></div>
-      <div class="board-role">Founder &amp; Vice President</div>
-      <div class="board-name">Izaya Luna</div>
-      <a href="https://www.linkedin.com/in/izaya-luna-aa868b397/" target="_blank" class="board-linkedin">
-        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </div>
   </div>
 
   <!-- Officers Grid -->
   <div class="board-grid">
     <div class="board-card reveal">
+      <div class="board-photo"><div class="board-initials">SR</div></div>
+      <div class="board-role">Vice President</div>
+      <div class="board-name">Shreyas Rao</div>
+      <span class="board-soon">LinkedIn soon</span>
+    </div>
+    <div class="board-card reveal reveal-delay-1">
+      <div class="board-photo"><div class="board-initials">JP</div></div>
+      <div class="board-role">Director of Operations</div>
+      <div class="board-name">Jason Pan</div>
+      <span class="board-soon">LinkedIn soon</span>
+    </div>
+    <div class="board-card reveal reveal-delay-2">
+      <div class="board-photo"><div class="board-initials">JL</div></div>
+      <div class="board-role">Director of Communications</div>
+      <div class="board-name">Jessica Lucero</div>
+      <span class="board-soon">LinkedIn soon</span>
+    </div>
+    <div class="board-card reveal">
+      <div class="board-photo"><img src="images/gitalie-kwan.jpg" alt="Gitalie Kwan"></div>
+      <div class="board-role">Social Media</div>
+      <div class="board-name">Gitalie Kwan</div>
+      <a href="https://www.linkedin.com/in/gitalie-kwan-580753373/" target="_blank" class="board-linkedin">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+    <div class="board-card reveal reveal-delay-1">
       <div class="board-photo"><img src="images/erin-meader.jpg" alt="Erin Meader"></div>
       <div class="board-role">Treasurer</div>
       <div class="board-name">Erin Meader</div>
@@ -1175,54 +1222,18 @@ section { position: relative; z-index: 1; }
         LinkedIn
       </a>
     </div>
-    <div class="board-card reveal reveal-delay-1">
-      <div class="board-photo"><img src="images/farah-al-nuaimie.jpg" alt="Farah Al Nuaimie"></div>
-      <div class="board-role">Director of Communications</div>
-      <div class="board-name">Farah Al Nuaimie</div>
-      <a href="https://www.linkedin.com/in/farah-al-nuaimie-7001733a6/" target="_blank" class="board-linkedin">
-        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </div>
     <div class="board-card reveal reveal-delay-2">
-      <div class="board-photo"><img src="images/siddharth-manesh.jpg" alt="Siddharth Manesh"></div>
+      <div class="board-photo"><img src="images/siddharth-manesh.jpg" alt="Siddharth Mahesh"></div>
       <div class="board-role">Director of Education</div>
-      <div class="board-name">Siddharth Manesh</div>
+      <div class="board-name">Siddharth Mahesh</div>
       <a href="https://www.linkedin.com/in/siddharth-mahesh-33557b220/" target="_blank" class="board-linkedin">
-        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </div>
-    <div class="board-card reveal">
-      <div class="board-photo"><img src="images/gitalie-kwan.jpg" alt="Gitalie Kwan"></div>
-      <div class="board-role">Social Media Officer</div>
-      <div class="board-name">Gitalie Kwan</div>
-      <a href="https://www.linkedin.com/in/gitalie-kwan-580753373/" target="_blank" class="board-linkedin">
-        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </div>
-    <div class="board-card reveal reveal-delay-1">
-      <div class="board-photo"><img src="images/david-maya.jpg" alt="David Maya"></div>
-      <div class="board-role">Social Media Officer</div>
-      <div class="board-name">David Maya</div>
-      <a href="https://www.linkedin.com/in/david-maya0328/" target="_blank" class="board-linkedin">
-        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </div>
-    <div class="board-card reveal reveal-delay-2">
-      <div class="board-photo"><img src="images/sam-hwang.jpg" alt="Samuel Hwang"></div>
-      <div class="board-role">Communications Officer</div>
-      <div class="board-name">Samuel Hwang</div>
-      <a href="https://www.linkedin.com/in/samuel-hwang-776a07380/" target="_blank" class="board-linkedin">
         <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
       </a>
     </div>
     <div class="board-card reveal" style="grid-column: 2">
       <div class="board-photo"><img src="images/anna-hu.jpg" alt="Anna Hu"></div>
-      <div class="board-role">Education Officer</div>
+      <div class="board-role">Graphic Design</div>
       <div class="board-name">Anna Hu</div>
       <a href="https://www.linkedin.com/in/anna-hu-08aa0738b/" target="_blank" class="board-linkedin">
         <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -1251,6 +1262,32 @@ section { position: relative; z-index: 1; }
     <img src="images/meeting-3.jpg" alt="UCDPF Meeting 3">
     <img src="images/meeting-4.jpg" alt="UCDPF Meeting 4">
     <img src="images/meeting-5.jpg" alt="UCDPF Meeting 5">
+  </div>
+</section>
+
+<!-- MEETINGS -->
+<section class="meetings" id="meetings" style="padding:8rem 2rem; background:radial-gradient(ellipse at 50% 20%, rgba(201,168,76,0.04) 0%, transparent 55%), var(--bg-deep);">
+  <div class="section-header reveal">
+    <div class="section-label">When We Meet</div>
+    <h2 class="section-title">Meetings &amp; <span class="gold">Schedule</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="reveal" style="max-width:760px; margin:0 auto; text-align:center;">
+    <p style="font-family:'Cinzel',serif; font-size:1.5rem; color:var(--gold); letter-spacing:1px; margin-bottom:0.5rem;">Thursdays &middot; 7:00&ndash;8:00 PM</p>
+    <p style="color:var(--text-dim); font-size:0.9rem; letter-spacing:3px; text-transform:uppercase; margin-bottom:2.5rem;">TCC 2218 &middot; UC Davis</p>
+    <div style="background:var(--bg-card); border:1px solid var(--border); padding:2.5rem 2rem; position:relative;">
+      <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));"></div>
+      <div style="font-size:0.68rem; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:1.5rem;">Next Up &mdash; Fall 2026</div>
+      <div style="display:flex; gap:1.5rem; align-items:flex-start; text-align:left; padding-bottom:1.2rem; border-bottom:1px solid rgba(255,255,255,0.05);">
+        <div style="font-family:'Cinzel',serif; color:var(--gold); font-weight:700; min-width:92px;">Thu, Oct 1</div>
+        <div style="color:var(--text-dim); font-size:0.9rem; line-height:1.5;">Welcome Night &mdash; sign-ups, group formation, and Discord. New members start here.</div>
+      </div>
+      <div style="display:flex; gap:1.5rem; align-items:flex-start; text-align:left; padding-top:1.2rem;">
+        <div style="font-family:'Cinzel',serif; color:var(--gold); font-weight:700; min-width:92px;">Thu, Oct 8</div>
+        <div style="color:var(--text-dim); font-size:0.9rem; line-height:1.5;">First session: <em style="color:var(--text);">The 1-Hour Portfolio That Beats Most Adults</em> &mdash; a copy-able starter allocation you can deploy with $100 or $10k.</div>
+      </div>
+    </div>
+    <p style="color:var(--text-dim); font-size:0.85rem; margin-top:1.5rem;">New members welcome every week. <a href="https://discord.gg/Df5pKU2d9e" target="_blank" style="color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold);">Join the Discord</a> for reminders.</p>
   </div>
 </section>
 
