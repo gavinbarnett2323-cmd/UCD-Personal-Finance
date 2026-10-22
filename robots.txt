@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gavinbarnett2323-cmd.github.io/UCD-Personal-Finance/sitemap.xml
